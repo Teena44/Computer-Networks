@@ -1,0 +1,31 @@
+Assignment 1
+
+Steps to compile the server.c and client.c files
+1.Type the command "make all" in terminal.
+
+Steps to run the files:
+
+1.Run server.c - ./server 8080
+2.Run client.c in a separate terminal - ./client 8080
+
+Working:
+
+All the commands are supposed to be given in the client terminal through the Main-Prompt. 
+The valid commands are (The commands are to be given in exactly the same way as mentioned)-
+1.Listusers - Lists all the users.
+2.Adduser <user> - A new user can be added. A new spool file is created.
+3.Setuser <user> - The control goes to <user>. A Sub-Prompt appears, in which the commands "Read", "Send", "Delete", "Done" are given.
+4.Read - Reads one mail at each "Read" command given, of the current user.
+5.Send <receiver> - After giving this command, the server demands the message to be sent to <receiver>. 
+		    NOTE: For the mail to be valid, the message has to end with a space followed by "###".
+6.Delete - The current message is deleted from the user's inbox.
+8.Done - The user is done. No user in control.
+9.Quit - The server and client disconnect. The programs stop runnning.
+
+NOTE: The commands Read, Delete, Done, Send are valid only if the user is set.
+The server and client throw "ERROR" if a command is passed which does not match any of the above mentioned commands.
+
+The spool files related to each user, is created in the MAILSERVER directory. The server reads, writes and deletes messages as specified by
+the user from these spool files.
+
+
