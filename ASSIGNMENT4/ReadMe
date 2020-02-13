@@ -1,0 +1,21 @@
+Assignment 4
+
+Steps to compile TCP.c file
+
+1.Type the command "make" in terminal from the current directory which contains all the source files and make file.
+
+Steps to run the files:
+
+1.Run the ith file along with the following command line parameters in the given order-
+		Ki : 1 ≤ Ki ≤ 4 denotes the initial congestion window (CW)
+		Km : 0:5 ≤ Km ≤ 2 denotes the multiplier of Congestion Window, during exponential growth phase
+		Kn: 0:5 ≤ Kn ≤ 2 denotes the multiplier of Congestion Window, during linear growth phase
+		Kf :  0:1 ≤ Kf ≤ 0:5 denotes the multiplier when a timeout occurs
+		P :  0 < Ps < 1, denotes the probability of receiving the ACK packet for a given segment before its timeout occurs
+		T : the total number of segments to be sent before the emulation stops
+
+		$ ./TCP Ki Km Kn Kf P T
+
+		Example (Ki = 1, Km = 1, Kn = 1, Kf = 0.5, P = 0.01, T = 1000 ):
+
+		$./TCP 1 1 1 0.5 0.01 1000
