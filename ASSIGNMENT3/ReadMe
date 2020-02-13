@@ -1,0 +1,25 @@
+Assignment 3
+
+Steps to compile Assignment3.c file
+
+1.Type the command "make" in terminal from the current directory which contains all the source files and make file.
+
+Steps to run the files:
+
+1.The number of nodes N, can be found from the first value in the input file.
+2.As many processes (Routers) as N, need to be run in N different terminals.
+3.Run the ith process (ith Router) as-
+		$i ./Assignment3 i Input i HELLO_INTERVAL LSA_INTERVAL SPF_INTERVAL
+
+		Example (DEFAULT N=8, HELLO_INTERVAL = 1 secs, LSA_INTERVAL = 5 secs, SPF_INTERVAL = 20 secs):
+		
+		$0 ./Assignment3 0 Input 0 1 5 20
+		$1 ./Assignment3 1 Input 1 1 5 20
+		$2 ./Assignment3 2 Input 2 1 5 20
+		$3 ./Assignment3 3 Input 3 1 5 20
+		$4 ./Assignment3 4 Input 4 1 5 20
+		$5 ./Assignment3 5 Input 5 1 5 20
+		$6 ./Assignment3 6 Input 6 1 5 20
+		$7 ./Assignment3 7 Input 7 1 5 20
+
+PORT NUMBER ARE TAKEN AS 10000+i by the ith process.
