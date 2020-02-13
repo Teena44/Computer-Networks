@@ -1,0 +1,26 @@
+Assignment 2
+
+Steps to compile the serverGBN.c, clientGBN.c, serverSR.c and clientSR.c files
+
+1.Type the command "make all" in terminal from the current directory which contains all the source files and make file.
+
+Steps to run the files:
+
+1.Run the Go Back N protocol-
+		$1 ./serverGBN IPAddress PORT Packet_length Rate_of_packet_generation Max_Packets Window_size Max_Buffer_Size debug(optional)
+		$2 ./clientGBN PORT Max_Packets Drop_probab debug(optional)
+
+		Example:
+		$1 ./serverGBN 127.0.0.1 8888 512 10 400 3 10 1(optional)
+		$2 ./clientGBN 8888 400 0.0001 1(optional)
+
+2.Run the Selective Repeat Protocol-
+		$1 ./serverSR IPAddress PORT sequence_bit Packet_length Rate_of_packet_generation Max_Packets Window_size Max_Buffer_Size debug(optional)
+		$2 ./clientSR400 PORT Max_Packets sequence_bit Window_size Buffer_size Drop_probab debug(optional)
+
+		Example:
+		$1 ./serverSR 127.0.0.1 8888 8 1024 10 400 4 100 1(optional)
+		$2 ./clientSR 8888 400 8 4 100 0.0001 1(optional)
+
+PORT NUMBER TO BE USED: 8888
+Note: Window size of the client in SR protocol is assumed to be same as the window size of server in SR.
